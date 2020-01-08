@@ -10,44 +10,23 @@
 //if age >= 13 && unaccompanied by an adult return TRUE
 //Ternary operator may address the 12 and under...
 
-// let childAge = document.getElementById("child_age"),
-//     adultPresent = document.getElementById("adult_present"),
-//     permitButton = document.getElementById("permit_button");
+let childAge = document.getElementById("child_age"),
+    adultPresent = document.getElementById("adult_present"),
+    checkButton = document.getElementById("check_button"),
+    displayAnswer = document.getElementById("display_answer");
 
 
-// let ageCheck = function ageCheck(){
-//     if (childAge < 12 && adultPresent || childAge >= 13) return true
-//     else return false
-// }
-
-//     permitButton.addEventListener("click", function{
-
-// });
-
-let age = 12;
-let parent = false;
-let check = function check() {
-    if (age < 13 && parent)
+let ageCheck = function ageCheck(){
+    if (childAge.value < 13 && adultPresent.value)
     return true;
-    else if (age >= 13 || parent)
+    else if (childAge.value >= 13 || adultPresent.value)
     return true;
     else 
     return false;
 };
 
 
+    checkButton.addEventListener("click", function(){
+        displayAnswer.innerHTML += ageCheck() + "<br>";
+    });
 
-console.log(check());
-
-
-// function newFunction() {
-//     let check = function check(age, parent) 
-//         if (age < 13 && parent)
-//             = true;
-//         return true;
-//     };
-//     if (age > 13 && parent)
-//         = true;
-//     return true;
-//     ;
-// }
